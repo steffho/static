@@ -1,6 +1,7 @@
 pipeline {
   agent any
   stages{
+    tidy -q -e *.html
     stage('Upload to AWS.'){
       steps {
         sh 'echo "Hello Udacity"'
